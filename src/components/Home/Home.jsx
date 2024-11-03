@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Banner from "../Banner/Banner";
 
 const Home = () => {
     const [product, setProduct] = useState([]);
@@ -10,8 +11,9 @@ const Home = () => {
     }, [])
 
     return (
-        <div className="">
-            <h3 className="text-4xl">Product: {product.length}</h3>
+        <div>
+            <Banner></Banner>
+            <h3 className="text-3xl md:text-5xl text-center font-bold">Explore Cutting-Edge Gadgets {product}</h3>
         </div>
     );
 };

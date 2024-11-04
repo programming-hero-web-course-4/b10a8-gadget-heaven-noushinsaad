@@ -11,7 +11,7 @@ const Products = () => {
     }, [])
 
     return (
-        <div>
+        <div className="py-4">
             <h3 className="text-3xl md:text-5xl text-center font-bold mb-10">Explore Cutting-Edge Gadgets</h3>
             <div className="flex flex-col lg:flex-row gap-4 p-2">
                 <div className="col-span-1 flex flex-col border-2 rounded-xl p-6 gap-6 h-fit lg:w-[20%]">

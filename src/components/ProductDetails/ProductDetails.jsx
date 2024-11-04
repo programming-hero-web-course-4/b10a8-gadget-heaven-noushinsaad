@@ -32,12 +32,12 @@ const ProductDetails = () => {
                     </div>
                 </div>
             </div>
-            <div className='w-3/4 mx-auto border-2 p-2 bg-white rounded-xl relative -top-24 md:-top-44'>
-                <div className="flex gap-6">
-                    <div className="border-2 w-1/3 h-[500px] bg-gray-300 rounded-xl p-4">
+            <div className='w-3/4 mx-auto border-2 p-2 bg-white rounded-xl relative -top-44'>
+                <div className="flex flex-col lg:flex-row gap-6">
+                    <div className="border-2 lg:w-2/5 h-[250px] lg:h-[500px] bg-gray-300 rounded-xl p-4">
                         <img className="border-2 h-full rounded-xl" src={product_image} alt={product_title} />
                     </div>
-                    <div className="border-2 w-2/3 rounded-xl p-3 space-y-4">
+                    <div className="lg:w-3/5 rounded-xl p-3 space-y-4">
                         <h2 className="text-3xl font-extrabold">{product_title}</h2>
                         <p className="text-xl font-semibold opacity-80 flex items-center gap-1">Price: <FaBangladeshiTakaSign />{price}</p>
                         <p className="badge outline outline-2 bg-green-200 outline-green-500 text-lime-700 p-3">

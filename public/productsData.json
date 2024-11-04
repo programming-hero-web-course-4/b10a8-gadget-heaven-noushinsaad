@@ -2,7 +2,7 @@
     {
         "product_id": "LPT1001",
         "product_title": "Dell XPS 15",
-        "product_image": "https://example.com/images/dell-xps-15.jpg",
+        "product_image": "https://i.postimg.cc/xT90Nyrm/pexels-fotios-photos-811587.jpg",
         "category": "Laptop",
         "price": 164999.00,
         "description": "High-performance laptop with immersive display.",
@@ -21,7 +21,7 @@
     {
         "product_id": "LPT1002",
         "product_title": "HP Spectre x360",
-        "product_image": "https://example.com/images/hp-spectre-x360.jpg",
+        "product_image": "https://i.postimg.cc/nLLbGppY/pexels-anna-keibalo-620756389-17706646.jpg",
         "category": "Laptop",
         "price": 142999.00,
         "description": "Convertible laptop with sleek design.",
@@ -40,7 +40,7 @@
     {
         "product_id": "ACC2001",
         "product_title": "Logitech MX Master 3",
-        "product_image": "https://example.com/images/logitech-mx-master-3.jpg",
+        "product_image": "https://i.postimg.cc/Fs3XpTcz/pexels-jonathanborba-7006947.jpg",
         "category": "Accessories",
         "price": 10999.00,
         "description": "Wireless mouse for productivity.",
@@ -58,7 +58,7 @@
     {
         "product_id": "ACC2002",
         "product_title": "Anker USB-C Hub",
-        "product_image": "https://example.com/images/anker-usb-c-hub.jpg",
+        "product_image": "https://i.postimg.cc/DyBHBR02/pexels-stitch-20076003.jpg",
         "category": "Accessories",
         "price": 5499.00,
         "description": "Portable USB-C hub with multiple ports.",
@@ -74,7 +74,7 @@
     {
         "product_id": "PHN3001",
         "product_title": "Samsung Galaxy S21",
-        "product_image": "https://example.com/images/samsung-galaxy-s21.jpg",
+        "product_image": "https://i.postimg.cc/SN6C4pCh/pexels-zeleboba-29157232.jpg",
         "category": "Phone",
         "price": 87999.00,
         "description": "Smartphone with versatile camera.",
@@ -93,7 +93,7 @@
     {
         "product_id": "PHN3002",
         "product_title": "OnePlus 9",
-        "product_image": "https://example.com/images/oneplus-9.jpg",
+        "product_image": "https://i.postimg.cc/xjhV2wYt/One-Plus-9-Winter-Mist.jpg",
         "category": "Phone",
         "price": 80299.00,
         "description": "Smooth performance with 120Hz display.",
@@ -112,7 +112,7 @@
     {
         "product_id": "SWT4001",
         "product_title": "Apple Watch Series 7",
-        "product_image": "https://example.com/images/apple-watch-series-7.jpg",
+        "product_image": "https://i.postimg.cc/zGjR6SWS/Apple-Watch-Series-7-5.jpg",
         "category": "Smartwatch",
         "price": 43999.00,
         "description": "Durable smartwatch with health tracking.",
@@ -129,7 +129,7 @@
     {
         "product_id": "SWT4002",
         "product_title": "Samsung Galaxy Watch 4",
-        "product_image": "https://example.com/images/samsung-galaxy-watch-4.jpg",
+        "product_image": "https://i.postimg.cc/0yd4zQK2/0018694-galaxy-watch-4-galaxy-watch4-44mm-bluetooth-r870-original-samsung-malaysia-511.png",
         "category": "Smartwatch",
         "price": 27499.00,
         "description": "Advanced fitness tracking smartwatch.",
@@ -146,7 +146,7 @@
     {
         "product_id": "MAC5001",
         "product_title": "MacBook Air M2",
-        "product_image": "https://example.com/images/macbook-air-m2.jpg",
+        "product_image": "https://i.postimg.cc/63s4F9zn/maxresdefault.jpg",
         "category": "MacBook",
         "price": 131999.00,
         "description": "Lightweight MacBook with M2 chip.",
@@ -164,7 +164,7 @@
     {
         "product_id": "MAC5002",
         "product_title": "MacBook Pro 16-inch",
-        "product_image": "https://example.com/images/macbook-pro-16.jpg",
+        "product_image": "https://i.postimg.cc/wjLp0gtS/hero-intro-endframe-e6khcva4hkeq-large.jpg",
         "category": "MacBook",
         "price": 274999.00,
         "description": "Powerful MacBook for professionals.",
@@ -182,7 +182,7 @@
     {
         "product_id": "IPH6001",
         "product_title": "iPhone 13 Pro",
-        "product_image": "https://example.com/images/iphone-13-pro.jpg",
+        "product_image": "https://i.postimg.cc/c1ktNMDd/hq720.jpg",
         "category": "iPhone",
         "price": 109999.00,
         "description": "Powerful camera and display.",
@@ -200,7 +200,7 @@
     {
         "product_id": "IPH6002",
         "product_title": "iPhone SE (2022)",
-        "product_image": "https://example.com/images/iphone-se-2022.jpg",
+        "product_image": "https://i.postimg.cc/C1VX5qm1/apple-iphone-se-2022-1.jpg",
         "category": "iPhone",
         "price": 47299.00,
         "description": "Compact and affordable.",
@@ -218,7 +218,7 @@
     {
         "product_id": "ACC2003",
         "product_title": "Sony WH-1000XM4",
-        "product_image": "https://example.com/images/sony-wh-1000xm4.jpg",
+        "product_image": "https://i.postimg.cc/W4QFk2kt/61-F2-An-H2l-FL-AC-SL1460.jpg",
         "category": "Accessories",
         "price": 38499.00,
         "description": "Noise-canceling headphones.",
@@ -235,7 +235,7 @@
     {
         "product_id": "ACC2004",
         "product_title": "Apple AirPods Pro",
-        "product_image": "https://example.com/images/apple-airpods-pro.jpg",
+        "product_image": "https://i.postimg.cc/G2qWfpxm/554d8c32b91c655f02b4af864b76a4a7-jpg-720x720q80.jpg",
         "category": "Accessories",
         "price": 27499.00,
         "description": "True wireless earbuds with noise cancellation.",
@@ -252,7 +252,7 @@
     {
         "product_id": "LPT1003",
         "product_title": "Lenovo ThinkPad X1",
-        "product_image": "https://example.com/images/lenovo-thinkpad-x1.jpg",
+        "product_image": "https://i.postimg.cc/RFHMw4Lp/pexels-olenkabohovyk-5998486.jpg",
         "category": "Laptop",
         "price": 186999.00,
         "description": "Business laptop with powerful performance.",
@@ -270,7 +270,7 @@
     {
         "product_id": "PHN3003",
         "product_title": "Google Pixel 6",
-        "product_image": "https://example.com/images/google-pixel-6.jpg",
+        "product_image": "https://i.postimg.cc/9MbDNykw/Google-Pixel-6-1819.jpg",
         "category": "Phone",
         "price": 65999.00,
         "description": "Phone with Google Tensor chip.",

@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import Product from "../Product/Product";
 
-const categories = ["All Products", "Laptop", "Accessories", "Phone", "Smartwatch", "iPhone", "MacBook"];
+const categories = ["All Products", "Laptop", "Accessories", "Phone", "Smartwatch", "iPhone", "MacBook", "Tablet"];
 
 const Products = () => {
     const [allProducts, setAllProducts] = useState([]);
     const [products, setProducts] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState("All Products");
+    const [message, setMessage] = useState("");
 
     useEffect(() => {
         fetch('./productsData.json')
@@ -14,18 +15,28 @@ const Products = () => {
             .then(data => setAllProducts(data))
     }, []);
 
-    useEffect(() => {   
+    useEffect(() => {
         setProducts(allProducts);
     }, [allProducts]);
 
     const handleCategory = (category) => {
         setSelectedCategory(category);
+        setMessage("");
+
         if (category === "All Products") {
             setProducts(allProducts);
-            // console.log(allProducts);
-        } else {
-            const filteredProducts = allProducts.filter(product => product.category === category);
-            setProducts(filteredProducts);
+        }
+        else {
+            const categoryExists = allProducts.some(product => product.category === category);
+
+            if (categoryExists) {
+                const filteredProducts = allProducts.filter(product => product.category === category);
+                setProducts(filteredProducts);
+            }
+            else {
+                setMessage(`No products available for ${category}`);
+                setProducts([]);
+            }
         }
     };
 
@@ -38,16 +49,26 @@ const Products = () => {
                         <button
                             key={category}
                             onClick={() => handleCategory(category)}
-                            className={`btn ${selectedCategory === category ? "bg-purple-500 text-white"  : "btn-outline"} rounded-full bg-gray-200 `}
+                            className={`btn ${selectedCategory === category ?
+                                "bg-purple-500 text-white" : "btn-outline"}
+                                rounded-full bg-gray-200 `}
                         >
                             {category}
                         </button>
                     ))}
 
                 </div>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {
-                        products.map(product => <Product key={product.product_id} product={product}></Product>)
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 lg:w-[80%] gap-6">
+                    {message ?
+                        (
+                            <div className="grid place-items-center w-full  col-span-3">
+                                <p className="text-3xl font-semibold">{message}</p>
+                            </div>
+                        )
+                        :
+                        (
+                            products.map(product => <Product key={product.product_id} product={product}></Product>)
+                        )
                     }
                 </div>
             </div>

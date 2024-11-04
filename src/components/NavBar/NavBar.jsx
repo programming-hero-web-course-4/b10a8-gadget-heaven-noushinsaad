@@ -45,7 +45,7 @@ const NavBar = () => {
                 <button className="btn btn-ghost btn-circle outline">
                     <div className="indicator">
                         <IoCartOutline className="text-2xl" />
-                        {/* <span className="badge badge-sm badge-primary indicator-item  rounded-full"></span> */}
+                        {/* <span className={`${!count ? "hidden" : "outline bg-white text-black indicator-item p-1 rounded-badge"} `}>{count}</span> */}
                     </div>
                 </button>
                 <button className="btn btn-ghost btn-circle outline">

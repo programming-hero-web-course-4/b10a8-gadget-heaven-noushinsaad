@@ -6,13 +6,14 @@ import { useCart } from '../Root/Root';
 
 
 const Dashboard = () => {
-    const { cart, totalPrice, wishList, setCart } = useCart();
+    const { cart, totalPrice, wishList, setCart, deleteProductFromCart, deleteProductFromWishList } = useCart();
 
     const handleSortByPrice = () => {
         const sortedCartList = [...cart].sort((a, b) => b.price - a.price);
         console.log(sortedCartList)
         setCart(sortedCartList)
     }
+
 
     return (
         <div className='bg-gray-100'>
@@ -39,7 +40,7 @@ const Dashboard = () => {
 
 
                 <TabPanel>
-                    <div className='w-3/4 mx-auto flex justify-between items-center p-3'>
+                    <div className='w-3/4 mx-auto flex flex-col md:flex-row justify-between items-center p-3'>
                         <h2 className='text-2xl font-semibold'>Cart</h2>
                         <div className='flex items-center justify-between gap-6'>
                             <h1 className='text-xl font-semibold'>Total Cost: {totalPrice}</h1>
@@ -49,7 +50,12 @@ const Dashboard = () => {
                     </div>
                     <div className='space-y-4 py-8'>
                         {
-                            cart.map(product => <ProductList key={product.product_id} product={product}></ProductList>)
+                            cart.map(product => <ProductList
+                                key={product.product_id}
+                                product={product}
+                                deleteProduct={() => deleteProductFromCart(product.product_id)}
+                                listType="cart"
+                            ></ProductList>)
                         }
                     </div>
                 </TabPanel>
@@ -57,7 +63,12 @@ const Dashboard = () => {
                     <h2 className='text-3xl text-center my-4 bg-gray-200 p-4 font-semibold rounded-xl'>Product I wish to Buy</h2>
                     <div className='space-y-4 py-8'>
                         {
-                            wishList.map(product => <ProductList key={product.product_id} product={product}></ProductList>)
+                            wishList.map(product => <ProductList
+                                key={product.product_id}
+                                product={product}
+                                deleteProduct={() => deleteProductFromWishList(product.product_id)}
+                                listType="wishlist"
+                            ></ProductList>)
                         }
                     </div>
                 </TabPanel>

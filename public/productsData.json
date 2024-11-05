@@ -13,7 +13,7 @@
             "Display: 15.6-inch FHD+",
             "Battery Life: 10 hours"
         ],
-        "availability": true,
+        "stock_quantity": 1,
         "rating": 4.5,
         "brand": "Dell",
         "warranty": "1 year"
@@ -32,7 +32,7 @@
             "Display: 13.3-inch 4K UHD",
             "Battery Life: 12 hours"
         ],
-        "availability": true,
+        "stock_quantity": 3,
         "rating": 4.5,
         "brand": "HP",
         "warranty": "1 year"
@@ -50,7 +50,7 @@
             "Battery: USB-C rechargeable",
             "Compatibility: Windows, macOS"
         ],
-        "availability": true,
+        "stock_quantity": 2,
         "rating": 4.8,
         "brand": "Logitech",
         "warranty": "2 years"
@@ -66,7 +66,7 @@
             "Ports: USB, HDMI, SD",
             "Compatibility: MacBook, Windows"
         ],
-        "availability": true,
+        "stock_quantity": 4,
         "rating": 4.6,
         "brand": "Anker",
         "warranty": "1 year"
@@ -85,7 +85,7 @@
             "Display: 6.2-inch AMOLED",
             "Battery: 4000 mAh"
         ],
-        "availability": true,
+        "stock_quantity": 6,
         "rating": 4.6,
         "brand": "Samsung",
         "warranty": "1 year"
@@ -104,7 +104,7 @@
             "Display: 6.55-inch AMOLED",
             "Battery: 4500 mAh"
         ],
-        "availability": true,
+        "stock_quantity": 1,
         "rating": 3.7,
         "brand": "OnePlus",
         "warranty": "1 year"
@@ -121,7 +121,7 @@
             "Battery: 18 hours",
             "Water Resistant: 50m"
         ],
-        "availability": true,
+        "stock_quantity": 3,
         "rating": 4.9,
         "brand": "Apple",
         "warranty": "1 year"
@@ -138,7 +138,7 @@
             "Battery: 40 hours",
             "Water Resistant: IP68"
         ],
-        "availability": true,
+        "stock_quantity": 5,
         "rating": 4.7,
         "brand": "Samsung",
         "warranty": "1 year"
@@ -156,7 +156,7 @@
             "Storage: 256GB SSD",
             "Battery: 18 hours"
         ],
-        "availability": true,
+        "stock_quantity": 0,
         "rating": 4.8,
         "brand": "Apple",
         "warranty": "1 year"
@@ -174,7 +174,7 @@
             "Storage: 512GB SSD",
             "Battery: 21 hours"
         ],
-        "availability": true,
+        "stock_quantity": 2,
         "rating": 4.9,
         "brand": "Apple",
         "warranty": "1 year"
@@ -192,7 +192,7 @@
             "Storage: 128GB",
             "Battery: 22 hours"
         ],
-        "availability": true,
+        "stock_quantity": 6,
         "rating": 4.9,
         "brand": "Apple",
         "warranty": "1 year"
@@ -210,7 +210,7 @@
             "Storage: 64GB",
             "Battery: 15 hours"
         ],
-        "availability": true,
+        "stock_quantity": 3,
         "rating": 4.6,
         "brand": "Apple",
         "warranty": "1 year"
@@ -227,7 +227,7 @@
             "Connectivity: Bluetooth 5.0",
             "Noise Cancelling: Yes"
         ],
-        "availability": true,
+        "stock_quantity": 5,
         "rating": 4.8,
         "brand": "Sony",
         "warranty": "1 year"
@@ -244,7 +244,7 @@
             "Connectivity: Bluetooth 5.0",
             "Noise Cancelling: Yes"
         ],
-        "availability": true,
+        "stock_quantity": 1,
         "rating": 4.7,
         "brand": "Apple",
         "warranty": "1 year"
@@ -262,7 +262,7 @@
             "Storage: 512GB SSD",
             "Battery: 15 hours"
         ],
-        "availability": true,
+        "stock_quantity": 2,
         "rating": 4.6,
         "brand": "Lenovo",
         "warranty": "1 year"
@@ -280,7 +280,7 @@
             "Storage: 128GB",
             "Battery: 4600 mAh"
         ],
-        "availability": true,
+        "stock_quantity": 4,
         "rating": 4.7,
         "brand": "Google",
         "warranty": "1 year"

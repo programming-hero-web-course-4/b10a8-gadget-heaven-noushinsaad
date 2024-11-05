@@ -7,6 +7,7 @@ import { IoIosHeartEmpty } from "react-icons/io";
 import ReactStars from "react-rating-stars-component";
 
 import { useCart } from "../Root/Root";
+// import { useState } from "react";
 
 
 
@@ -19,9 +20,18 @@ const ProductDetails = () => {
 
     const product = data.find(product => product.product_id === productId);
 
-    const { product_title, product_image, price, availability, description, Specification, rating } = product;
+    const { product_title, product_image, price, stock_quantity, description, Specification, rating } = product;
 
     const { addToCart, addToWishList } = useCart();
+
+
+    const handleAddToCart = () => {
+        if (product.stock_quantity > 0) {
+            addToCart(product);
+        } else {
+            alert("Product is out of stock!");
+        }
+    };
 
 
 
@@ -29,7 +39,6 @@ const ProductDetails = () => {
         size: 50,
         count: 5,
         value: rating,
-        // a11y: true,
         isHalf: true,
         edit: false,
     };
@@ -56,11 +65,13 @@ const ProductDetails = () => {
                     <div className="lg:w-3/5 rounded-xl p-3 space-y-4">
                         <h2 className="text-3xl font-extrabold">{product_title}</h2>
                         <p className="text-xl font-semibold opacity-80 flex items-center gap-1">Price: <FaBangladeshiTakaSign />{price}</p>
-                        <p className="badge outline outline-2 bg-green-200 outline-green-500 text-lime-700 p-3">
-                            {
-                                availability ? 'In Stock' : 'Out of Stock'
-                            }
-                        </p>
+
+                        {
+                            stock_quantity ?
+                                <p className="badge outline outline-2 bg-green-200 outline-green-500 text-lime-700 p-3">In Stock</p> :
+                                <p className="badge outline outline-2 bg-red-200 outline-red-500 text-red-700 p-3">Out of Stock</p>
+                        }
+
                         <p className="opacity-70">{description}</p>
                         <div>
                             <h1 className="font-bold">Specification:</h1>
@@ -81,7 +92,7 @@ const ProductDetails = () => {
                         </div>
                         <div className="flex gap-2">
                             <button
-                                onClick={() => addToCart(product)}
+                                onClick={handleAddToCart}
                                 className="flex items-center btn rounded-full">Add to Cart <IoCartOutline className="text-2xl" /></button>
                             <button
                                 onClick={() => addToWishList(product)}

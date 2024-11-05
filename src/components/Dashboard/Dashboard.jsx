@@ -2,11 +2,14 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 import ProductList from '../ProductList/ProductList';
 import { useCart } from '../Root/Root';
+import { useState } from 'react';
 
 
 
 const Dashboard = () => {
     const { cart, totalPrice, wishList, setCart, deleteProductFromCart, deleteProductFromWishList } = useCart();
+
+    const [activeTab, setActiveTab] = useState('cart');
 
     const handleSortByPrice = () => {
         const sortedCartList = [...cart].sort((a, b) => b.price - a.price);
@@ -30,8 +33,17 @@ const Dashboard = () => {
 
                     <div className='flex justify-center'>
                         <TabList className="flex gap-6">
-                            <Tab><button className='btn px-6 rounded-full'>Cart</button></Tab>
-                            <Tab><button className='btn px-6  rounded-full'>Wish List</button></Tab>
+                            <Tab>
+                                <button onClick={() => setActiveTab('cart')}
+                                    className={`btn px-6 rounded-full ${activeTab === 'cart' ? 'bg-purple-800 text-white' : 'bg-white text-black'}`}>
+                                    Cart
+                                </button>
+                            </Tab>
+                            <Tab>
+                                <button
+                                    onClick={() => setActiveTab('wishlist')}
+                                    className={`btn px-6 rounded-full ${activeTab === 'wishlist' ? 'bg-purple-800 text-white' : 'bg-white text-black'}`}>
+                                    Wish List</button></Tab>
                         </TabList>
                     </div>
 

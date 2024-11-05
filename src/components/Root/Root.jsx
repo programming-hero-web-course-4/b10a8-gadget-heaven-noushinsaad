@@ -2,6 +2,8 @@ import { Outlet } from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
 import { createContext, useContext, useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -29,20 +31,22 @@ const Root = () => {
         if (!productExists && product.stock_quantity > 0) {
             setCart([...cart, product]);
             setCartCount(cartCount + 1);
+            toast.success(`${product.product_title} added to the Cart Successfully`)
         }
         else {
-            alert("Out of Stock")
+            toast.warn(`Product  ${product.product_title} is already in the cart.`);
         }
     };
 
     const addToWishList = (product) => {
         const productExists = wishList.some(item => item.product_id === product.product_id);
         if (productExists) {
-            alert(`Product  ${product.product_title} is already in the wishlist.`);
+            toast.warn(`Product  ${product.product_title} is already in the wishlist.`);
         }
         else {
             setWishList([...wishList, product]);
             setWishListCount(wishListCount + 1)
+            toast.success(`${product.product_title} added to the Wish list Successfully`)
         }
     }
 
@@ -51,12 +55,14 @@ const Root = () => {
         const updatedProducts = cart.filter((product) => product.product_id !== productId);
         setCart(updatedProducts);
         setCartCount(cartCount - 1);
+        toast.info("Deleted from the Cart")
     };
 
     const deleteProductFromWishList = (productId) => {
         const updatedProducts = wishList.filter((product) => product.product_id !== productId);
         setWishList(updatedProducts);
-        setWishListCount(wishListCount - 1)
+        setWishListCount(wishListCount - 1);
+        toast.info("Deleted from the wish list")
     };
 
 
@@ -72,6 +78,7 @@ const Root = () => {
                 <NavBar></NavBar>
                 <Outlet></Outlet>
                 <Footer></Footer>
+                <ToastContainer />
             </CartContext.Provider>
         </div>
     );

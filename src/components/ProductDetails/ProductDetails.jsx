@@ -7,6 +7,7 @@ import { IoIosHeartEmpty } from "react-icons/io";
 import ReactStars from "react-rating-stars-component";
 
 import { useCart } from "../Root/Root";
+import { Helmet } from "react-helmet";
 // import { useState } from "react";
 
 
@@ -47,6 +48,10 @@ const ProductDetails = () => {
 
     return (
         <div className='relative bg-gray-100'>
+            <Helmet>
+                <title>{product.product_title} - Gadget Heaven</title>
+            </Helmet>
+
             <div>
                 <div className="text-center bg-purple-600 h-[400px] pt-4">
                     <div className="text-white">

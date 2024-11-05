@@ -7,8 +7,6 @@
 
 
 
---- Need to work on the add to cart and wish list button
---- Added functionality to the add to cart button and love button in the product details component using use context
-add delete options in the dashboard when clicking cross and in the navBar the cart count and wishlist count will be shown
+### add dynamic title, change banner and navbar for home and other pages , add a extra route called faq, add limitation in cart list
  
 

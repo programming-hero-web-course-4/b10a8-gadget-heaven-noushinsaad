@@ -16,6 +16,9 @@ export const useCart = () => {
 
 
 const Root = () => {
+
+
+
     const [cartCount, setCartCount] = useState(0)
     const [wishListCount, setWishListCount] = useState(0)
     const [cart, setCart] = useState([]);
@@ -26,15 +29,24 @@ const Root = () => {
         totalPrice += product.price;
     });
 
+    const clearCart = () => {
+        setCart([]);
+        setCartCount(0);
+    }
+
     const addToCart = (product) => {
         const productExists = cart.some(item => item.product_id === product.product_id);
-        if (!productExists && product.stock_quantity > 0) {
+
+        if (productExists) {
+            toast.warn(`Product  ${product.product_title} is already in the cart.`);
+        }
+        else if (totalPrice + product.price > 500000) {
+            toast.warn("Total price limit reached or exceeded");
+        }
+        else {
             setCart([...cart, product]);
             setCartCount(cartCount + 1);
             toast.success(`${product.product_title} added to the Cart Successfully`)
-        }
-        else {
-            toast.warn(`Product  ${product.product_title} is already in the cart.`);
         }
     };
 
@@ -71,7 +83,7 @@ const Root = () => {
             <CartContext.Provider
                 value={
                     {
-                        cart, wishList, addToCart, totalPrice, addToWishList, setCart,
+                        cart, wishList, addToCart, totalPrice, addToWishList, setCart, clearCart,
                         cartCount, wishListCount, deleteProductFromCart, deleteProductFromWishList
                     }
                 }>

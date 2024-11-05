@@ -6,7 +6,7 @@ const Footer = () => {
                 <p className="font-semibold opacity-70">Leading the way in cutting-edge technology and innovation.</p>
             </div>
             <div className="divider"></div>
-            <footer className="footer py-2 justify-around">
+            <footer className="footer py-2 justify-around text-lg text-center">
                 <nav>
                     <h6 className="footer-title">Services</h6>
                     <a className="link link-hover">Product Support</a>

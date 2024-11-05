@@ -284,5 +284,81 @@
         "rating": 4.7,
         "brand": "Google",
         "warranty": "1 year"
+    },
+    {
+        "product_id": "LPT1004",
+        "product_title": "Lenovo ThinkPad X1 Carbon",
+        "product_image": "https://i.postimg.cc/wM9Gw2NW/thinkpad-x1-carbon-silver-640x640-1.jpg",
+        "category": "Laptop",
+        "price": 183999.00,
+        "description": "High-performance business laptop with ultra-durability.",
+        "Specification": [
+            "Processor: Intel Core i7",
+            "RAM: 16GB",
+            "Storage: 1TB SSD",
+            "Display: 14-inch FHD",
+            "Battery Life: 18 hours"
+        ],
+        "stock_quantity": 4,
+        "rating": 4.7,
+        "brand": "Lenovo",
+        "warranty": "1 year"
+    },
+    {
+        "product_id": "LPT1005",
+        "product_title": "ASUS ROG Zephyrus G14",
+        "product_image": "https://i.postimg.cc/bJZxpthz/1578096205427.jpg",
+        "category": "Laptop",
+        "price": 139999.00,
+        "description": "Powerful gaming laptop with excellent performance.",
+        "Specification": [
+            "Processor: AMD Ryzen 9",
+            "RAM: 16GB",
+            "Storage: 1TB SSD",
+            "Display: 14-inch QHD",
+            "Battery Life: 11 hours"
+        ],
+        "stock_quantity": 2,
+        "rating": 4.9,
+        "brand": "ASUS",
+        "warranty": "2 years"
+    },
+    {
+        "product_id": "LPT1006",
+        "product_title": "Acer Swift 3",
+        "product_image": "https://i.postimg.cc/Wb8wmjXc/maxresdefault-1.jpg",
+        "category": "Laptop",
+        "price": 89999.00,
+        "description": "Lightweight and efficient laptop with great battery life.",
+        "Specification": [
+            "Processor: Intel Core i5",
+            "RAM: 8GB",
+            "Storage: 512GB SSD",
+            "Display: 14-inch FHD",
+            "Battery Life: 12 hours"
+        ],
+        "stock_quantity": 5,
+        "rating": 4.4,
+        "brand": "Acer",
+        "warranty": "1 year"
+    },
+    {
+        "product_id": "LPT1007",
+        "product_title": "Dell Inspiron 15",
+        "product_image": "https://i.postimg.cc/dtGtgtgg/dell-inspiron-15-3580-1-500x500-1.jpg",
+        "category": "Laptop",
+        "price": 74999.00,
+        "description": "Reliable and affordable laptop for everyday tasks.",
+        "Specification": [
+            "Processor: Intel Core i5",
+            "RAM: 8GB",
+            "Storage: 256GB SSD",
+            "Display: 15.6-inch HD",
+            "Battery Life: 10 hours"
+        ],
+        "stock_quantity": 6,
+        "rating": 4.3,
+        "brand": "Dell",
+        "warranty": "1 year"
     }
 ]

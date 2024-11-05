@@ -3,13 +3,15 @@ import { FaBangladeshiTakaSign } from "react-icons/fa6";
 import { IoCartOutline } from "react-icons/io5";
 import { IoIosHeartEmpty } from "react-icons/io";
 
-import { FaRegStar } from "react-icons/fa";
-import { FaStar } from "react-icons/fa6";
+
+import ReactStars from "react-rating-stars-component";
+
+import { useCart } from "../Root/Root";
+
+
 
 
 const ProductDetails = () => {
-
-
 
     const { productId } = useParams();
 
@@ -17,18 +19,20 @@ const ProductDetails = () => {
 
     const product = data.find(product => product.product_id === productId);
 
-    const { product_id, product_title, product_image, price, availability, description, Specification, rating } = product;
+    const { product_title, product_image, price, availability, description, Specification, rating } = product;
 
-    const fullStars = Math.floor(rating);
-    const hasHalfStar = rating % 1 >= 0.5;
+    const { addToCart, addToWishList } = useCart();
 
-    const handleAddToCart = ( product_id ) => {
-        console.log('added',  product_id );
-    }
 
-    const handleAddToWishList = ( product_id ) => {
-        console.log('added wish',  product_id );
-    }
+
+    const firstExample = {
+        size: 50,
+        count: 5,
+        value: rating,
+        // a11y: true,
+        isHalf: true,
+        edit: false,
+    };
 
 
 
@@ -70,20 +74,17 @@ const ProductDetails = () => {
                             <h1 className="font-bold">Rating</h1>
                             <div className="flex gap-2 items-center">
                                 <div className="flex">
-                                    {[...Array(fullStars)].map((_, i) => (
-                                        <FaStar key={i} className="text-yellow-500  text-xl" />
-                                    ))}
-                                    {hasHalfStar && <FaRegStar className="text-gray-300 text-xl" />}
+                                    <ReactStars {...firstExample} />
                                 </div>
                                 <p className="bg-gray-300 p-2 rounded-full">{rating}</p>
                             </div>
                         </div>
                         <div className="flex gap-2">
                             <button
-                                onClick={() => handleAddToCart(product_id)}
+                                onClick={() => addToCart(product)}
                                 className="flex items-center btn rounded-full">Add to Cart <IoCartOutline className="text-2xl" /></button>
                             <button
-                                onClick={() => handleAddToWishList(product_id)}
+                                onClick={() => addToWishList(product)}
                                 className="btn rounded-full"><IoIosHeartEmpty className="text-2xl" /></button>
                         </div>
                     </div>

@@ -90,29 +90,31 @@ const Dashboard = () => {
 
 
                 <TabPanel>
-                    <div className='w-3/4 mx-auto flex flex-col lg:flex-row justify-between items-center py-3 gap-6'>
-                        <h2 className='text-2xl font-semibold'>Cart</h2>
-                        <div className='flex flex-col-reverse lg:flex-row items-center justify-between gap-6'>
-                            <h1 className='text-xl font-semibold flex items-center gap-1'>Total Cost: <FaBangladeshiTakaSign /> {totalPrice}</h1>
-                            <div className='flex flex-col md:flex-row gap-2'>
-                                <button
-                                    onClick={handleSortByPrice}
-                                    className='btn btn-wide rounded-full  bg-purple-200'>
-                                    Sort By Price
-                                </button>
-                                <button
-                                    onClick={handlePurchase}
-                                    className='btn btn-wide rounded-full bg-purple-400'>
-                                    Purchase
-                                </button>
-                            </div>
+                    <div className='bg-gray-200 my-4 rounded-xl'>
+                        <div className='w-3/4 mx-auto flex flex-col lg:flex-row  items-center justify-between gap-6 py-3'>
+                            <h2 className='text-2xl font-semibold'>Cart</h2>
+                            <div className='flex flex-col-reverse lg:flex-row items-center justify-between gap-6'>
+                                <h1 className='text-xl font-semibold flex items-center gap-1'>Total Cost: <FaBangladeshiTakaSign /> {totalPrice}</h1>
+                                <div className='flex flex-col md:flex-row gap-2'>
+                                    <button
+                                        onClick={handleSortByPrice}
+                                        className='btn btn-wide rounded-full  bg-purple-200'>
+                                        Sort By Price
+                                    </button>
+                                    <button
+                                        onClick={handlePurchase}
+                                        className='btn btn-wide rounded-full bg-purple-400'>
+                                        Purchase
+                                    </button>
+                                </div>
 
-                            <Modal
-                                isOpen={isModalOpen}
-                                handleProceed={handleProceedModal}
-                                handleClose={handleCloseModal}
-                                totalPrice={totalPrice}
-                            ></Modal>
+                                <Modal
+                                    isOpen={isModalOpen}
+                                    handleProceed={handleProceedModal}
+                                    handleClose={handleCloseModal}
+                                    totalPrice={totalPrice}
+                                ></Modal>
+                            </div>
                         </div>
                     </div>
                     <div className='space-y-4 py-8'>

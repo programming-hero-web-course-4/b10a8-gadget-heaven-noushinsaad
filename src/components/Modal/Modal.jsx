@@ -14,7 +14,7 @@ const Modal = ({ isOpen, handleProceed, handleClose, totalPrice }) => {
                 <h2 className="text-3xl font-bold mb-4">Payment Successfully</h2>
                 <p className="text-lg opacity-80 font-semibold">Thanks for purchasing</p>
                 <p className="flex justify-center items-center gap-1 text-lg opacity-80 font-semibold">Total: <FaBangladeshiTakaSign />{totalPrice}</p>
-                <div className="flex flex-col md:flex-row gap-4">
+                <div className="flex flex-col justify-center items-center md:flex-row gap-4">
                     <button onClick={handleProceed} className="btn btn-wide rounded-full mt-4">Proceed</button>
                     <button onClick={handleClose} className="btn btn-wide rounded-full mt-4">Close</button>
                 </div>

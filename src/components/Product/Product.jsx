@@ -6,8 +6,8 @@ const Product = ({ product }) => {
     const { product_id, product_title, product_image, price } = product;
     return (
         <div className="card p-4 border-2 shadow-xl h-fit">
-            <figure className="w-full rounded-xl h-[200px] bg-gray-200">
-                <img className='w-full h-full object-contain'
+            <figure className="w-full rounded-xl h-[220px] bg-gray-200">
+                <img className='w-full h-full object-cover'
                     src={product_image}
                     alt={product_title} />
             </figure>

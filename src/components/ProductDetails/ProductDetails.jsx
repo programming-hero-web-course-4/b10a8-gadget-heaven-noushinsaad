@@ -36,8 +36,8 @@ const ProductDetails = () => {
 
 
 
-    const firstExample = {
-        size: 50,
+    const starRating = {
+        size: 30,
         count: 5,
         value: rating,
         isHalf: true,
@@ -64,7 +64,7 @@ const ProductDetails = () => {
             </div>
             <div className='w-3/4 mx-auto border-2 p-2 bg-white rounded-xl relative -top-44'>
                 <div className="flex flex-col lg:flex-row gap-6">
-                    <div className="border-2 lg:w-2/5 h-[250px] lg:h-[500px] bg-gray-300 rounded-xl p-4">
+                    <div className="border-2 lg:w-2/5 h-[250px] lg:h-[500px] bg-gray-300 rounded-xl ">
                         <img className="h-full w-full object-cover rounded-xl" src={product_image} alt={product_title} />
                     </div>
                     <div className="lg:w-3/5 rounded-xl p-3 space-y-4">
@@ -90,7 +90,7 @@ const ProductDetails = () => {
                             <h1 className="font-bold">Rating</h1>
                             <div className="flex gap-2 items-center">
                                 <div className="flex">
-                                    <ReactStars {...firstExample} />
+                                    <ReactStars {...starRating} />
                                 </div>
                                 <p className="bg-gray-300 p-2 rounded-full">{rating}</p>
                             </div>

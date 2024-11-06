@@ -1,8 +1,9 @@
 import { FaBangladeshiTakaSign } from "react-icons/fa6";
 import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
 
 const ProductList = ({ product, deleteProduct, listType }) => {
-    const { product_title, product_image, price, description } = product;
+    const { product_id, product_title, product_image, price, description } = product;
 
     return (
         <div className="w-3/4 mx-auto card shadow-xl">
@@ -33,7 +34,14 @@ const ProductList = ({ product, deleteProduct, listType }) => {
                         <p className="text-3xl font-bold">{product_title}</p>
                         <p className="text-lg opacity-75">{description}</p>
                         <p className="text-xl font-semibold opacity-80 flex items-center gap-1">Price: <FaBangladeshiTakaSign />{price}</p>
+                        <Link to={`/products/${product_id}`}>
+                            <button
+                                className="btn btn-wide rounded-full mt-4 bg-purple-400">
+                                View Details
+                            </button>
+                        </Link>
                     </div>
+
                 </div>
             </div>
         </div>

@@ -9,7 +9,9 @@ Discover the latest tech wonders that elevate your lifestyle. From sleek laptops
 
 
 
-### add dynamic title, change banner and navbar for home and other pages , add a extra route called faq, add limitation in cart list
+## Requirement Document
+
+For a detailed overview of project requirements, [https://github.com/ProgrammingHero1/B10-A8-gadget-heaven/blob/main/Batch-10_Assignment-08.pdf?fbclid=IwZXh0bgNhZW0CMTAAAR3DMBSpRWV031ik4G4tf6EudpxlkJ4dmWpxqWVhwS0fCATsccoRfHAEP-A_aem_Tjtc7faM7KvjJESleGiOdA]
  
 
 ## React Fundamentals Used in This Project

@@ -23,7 +23,7 @@ Discover the latest tech wonders that elevate your lifestyle. From sleek laptops
 7. **Helmet** - For dynamic title management on each page.
 
 
-### Context API
+## Context API
 
 The **Context API** is used in this project for efficient data handling and state management across different components without prop-drilling. Here’s how it is utilized:
 

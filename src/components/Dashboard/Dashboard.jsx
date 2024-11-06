@@ -6,11 +6,13 @@ import { useState } from 'react';
 import { toast } from 'react-toastify';
 import Modal from '../Modal/Modal';
 import { Helmet } from "react-helmet";
+import { useNavigate } from 'react-router-dom';
 
 
 
 const Dashboard = () => {
     const { cart, totalPrice, wishList, setCart, deleteProductFromCart, deleteProductFromWishList, clearCart } = useCart();
+    const navigate = useNavigate();
 
     const [activeTab, setActiveTab] = useState('cart');
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -28,23 +30,15 @@ const Dashboard = () => {
     }
 
     const handlePurchase = () => {
-        if (cart.length > 0) {
-            setIsModalOpen(true);
-        }
-        else {
-            toast.warn("Cart is empty");
-        }
+        setIsModalOpen(true);
     }
 
-    const handleProceedModal = () => {
-        setIsModalOpen(false);
-        clearCart();
-        toast.success("Order placed successfully!")
-    }
+
 
     const handleCloseModal = () => {
         setIsModalOpen(false);
-        // toast.success("Order placed successfully!")
+        clearCart();
+        navigate('/')
     }
 
 
@@ -103,14 +97,14 @@ const Dashboard = () => {
                                     </button>
                                     <button
                                         onClick={handlePurchase}
-                                        className='btn btn-wide rounded-full bg-purple-400'>
+                                        className='btn btn-wide rounded-full bg-purple-400'
+                                        disabled={cart.length === 0}>
                                         Purchase
                                     </button>
                                 </div>
 
                                 <Modal
                                     isOpen={isModalOpen}
-                                    handleProceed={handleProceedModal}
                                     handleClose={handleCloseModal}
                                     totalPrice={totalPrice}
                                 ></Modal>
